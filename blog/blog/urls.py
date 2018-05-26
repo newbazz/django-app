@@ -1,5 +1,6 @@
 from django.conf.urls import url, include	
 from django.contrib import admin
+from django.contrib.staticfiles.urls import *
 from . import views
 
 urlpatterns = [
@@ -8,3 +9,5 @@ urlpatterns = [
     url(r'^$', views.home),
     url(r'^articles/', include('articles.urls')),
 ]
+
+urlpatterns += staticfiles_urlpatterns() 

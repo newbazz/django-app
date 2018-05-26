@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<META charset='utf-8'>
-		<title>Home</title>
-	</head>
-	<body>
-		<h1>This is the homepage of articles</h1>
-		<p> please read the below listed articles</p>
-	</body>
-</html>
+{% extends 'base_layout.html' %}
+{% block content %}
+	<h1>This is the homepage of articles</h1>
+	<p> please read the below listed articles</p>
+	<div class='articles'>
+		{% for article in articles %}
+		<h1><a href='#'>{{ article.title }}</a></h1>
+		{% endfor %}
+	</div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<META charset='utf-8'>
+		<title>Home</title>
+		<link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+	</head>
+	<body>
+		<div class='wrapper'>
+			{% block content %}
+			{% endblock %}
+		</div>
+	</body>
+</html>
