@@ -4,11 +4,12 @@ from django.contrib.staticfiles.urls import *
 from . import views
 from django.conf.urls.static import *
 from django.conf import settings
+from articles import views as article_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^about/', views.about),
-    url(r'^$', views.home),
+    url(r'^$', article_views.article_list, name="home"),
     url(r'^articles/', include('articles.urls')),
     url(r'^accounts/', include('accounts.urls')),
 ]
