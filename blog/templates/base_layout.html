@@ -21,6 +21,9 @@
 					<li>
 						<a href="{% url 'article:create' %}" class="highlight">CREATE</a>
 					</li>
+					<li>
+						<a href="{% url 'user_profile:aboutme' %}" class="highlight">Make My Profile</a>
+					</li>
 					{% else %}
 						<li>
 							<a href="{% url 'accounts:login' %}">LOGIN</a>
